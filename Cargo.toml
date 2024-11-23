@@ -1,0 +1,11 @@
+[package]
+name = "jump"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name="jumpbin"
+path="src/main.rs"
+
+[dependencies]
+dirs = "5.0.1"
