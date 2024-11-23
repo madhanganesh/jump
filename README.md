@@ -7,10 +7,10 @@ Jump tool helps you to change your directories easily. Jump, in essense is same 
 jump ~/temp/src/learnings/rustbook/
 ```
 
-but when you use jump it something more:
-1. It keeps this folder in a most-recetly-used cache file 
-2. Next time you can simply pass part pf the path as in `jump rustbook`. This will search the MRU cache and jump to the path matching the part
-3. In case there are multiple paths matching the part it lists all of them and then you can navigate manually by picking one
+but when you use jump it does something more:
+1. It keeps the passed folder in a most-recetly-used cache file 
+2. Next time you can simply pass part of the path as in `jump rustbook`. This will search the MRU cache and jump to the path matching the part (you don't have to type the full folder again!!!)
+3. In case there are multiple paths matching the param, it lists all of them and then you can navigate manually by picking one
 4. If you simply run `jump` witout any parameters it lsists all the top MRU files
 
 ## Usage
@@ -24,6 +24,18 @@ jump() {
     fi
 }
 ```
+
+3. Enter jump command:
+   
+`jump <folder path>`      
+stores the path in cache and navigates to folder
+
+`jump <term>`             
+- searches the term in all recently navigated folder
+- If there is only a single match, navigates to folder
+- If there are multiple matches lists all matches
+
+`jump`                    -> lists all recetly navigated folders
 
 ## Variables
 1. The MRU file by default will be ~/jump.txt but you can change by seeting an env variable `DEFAULT_CACHE_FILE`
