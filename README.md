@@ -13,7 +13,7 @@ but when you use jump it does something more:
 3. In case there are multiple paths matching the param, it lists all of them and then you can navigate manually by picking one
 4. If you simply run `jump` witout any parameters it lsists all the top MRU files
 
-## Usage
+## Setup
 1. Compile the binary and keep in your path. So the rust binary `jumpbin` should be in your path
 2. In order for the shell to cd to the path executable is printing, please following macro in you shell start command. For eg in MacOS add following command in ~/.zshrc or ~/.bashrc
 ```
@@ -25,17 +25,16 @@ jump() {
 }
 ```
 
-3. Enter jump command:
-   
-`jump <folder path>`      
-stores the path in cache and navigates to folder
+## Usage
+`jump`  - lists all recetly navigated folders
+
+`jump <folder path>` - stores the path in cache and navigates to folder
 
 `jump <term>`             
 - searches the term in all recently navigated folder
 - If there is only a single match, navigates to folder
 - If there are multiple matches lists all matches
 
-`jump`                    -> lists all recetly navigated folders
 
 ## Variables
 1. The MRU file by default will be ~/jump.txt but you can change by seeting an env variable `DEFAULT_CACHE_FILE`
